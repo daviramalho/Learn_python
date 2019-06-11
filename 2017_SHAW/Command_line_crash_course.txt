@@ -1,0 +1,273 @@
+* Windows>"Powershell"
+
+EXERCISE 01	- CREATE POWERSHELL'S WINDOWS INDEX CARDS
+
+pwd		print working directory
+hostname	my computer's network name
+mkdir		make directory
+cd		change directory
+ls		list directory
+rmdir		remove directory
+pushd		push directory
+popd		pop directory
+cp		copy directory
+robocopy	robust copy
+mv		move a file or directory
+more		page through a file
+type		print the whole file
+forfiles	run a command on lots of files
+dir -r		find files
+select-string	find things inside files
+help		read a manual page
+helpctr		find what man page is appropriate
+echo		print some arguments
+set		export/set a new environment variable
+exit		exit the shell
+runas		DANGER! become super user root DANGER!
+
+DO MORE
+
+forfiles	Select a file (or a set of files) and execute a command on that file.
+attrib		Describes an attribute that declares a function which acts like a compiled cmdlet.
+icacls		?
+cat
+chdir
+clear
+cls
+del
+diff
+dir
+h
+kill
+lp
+popd
+ps
+pushd
+r
+ren
+rm
+sleep
+sort
+tee
+tipo
+write
+
+-----------
+
+ALIASES
+
+Get		g
+Set		s
+Item		i
+Local		l
+Command		cm
+Alias		al
+Get-Item	gi
+Set-Item	si
+Get-Location	gl
+Set-Location	sl
+Get-Command	gcm
+Get-Alias	gal
+
+
+
+EXERCISE 02	- PATHS, FOLDERS, DIRECTORIES (pwd)
+
+>pwd
+
+Write down pwd 20 times, spelling "Print Working Directory" in your head.
+
+EXERCISE 03	- GET BACK HOME
+
+>pwd	(telss you where you are)
+>cd ~	(takes you home)
+
+EXERCISE 04	- MAKE DIRECTORY (mkdir)
+
+>mkdir temp/stuff/things/frank/joe/alex/john
+
+Create 20 directories inside the tem folder
+
+Create a folder with a space by the command: mkdir temp/"I Have Fun"
+
+EXERCISE 05	- CHANGE DIRECTORY (cd)
+
+>pwd
+>cd ~
+>cd temp
+>cd stuff
+>cd ..
+>cd ../..
+>cd temp/stuff/things/frank/joe/alex/john
+>cd ../../../../../../../
+
+EXERCISE 06	- LIST DIRECTORY (ls)
+
+>pwd
+>cd ~
+>cd temp
+>ls
+>ls
+
+EXERCISE 07	- REMOVE DIRECTORY (rmdir)
+
+*This command line remove an EMPTY directory
+>pwd
+>cd ~
+>cd temp/stuff/things/frank/joe/alex/john/
+>cd ..
+>ls
+>rmdir john
+
+Make 20 more directories and remove them all.
+
+Make a single path of directories that is 10 deep and remove them one at a time.
+
+EXERCISE 08	- MOVE AROUND (pushd, popd)
+
+>pwd
+>cd ~
+
+>mkdir -p i/like/icecream
+[make an entire path even if all the directories don't exist]
+
+>pushd 
+[save the current location and go to a new location]
+[you always have to include the directory you want to go]
+
+>popd
+[return to the saved location]
+
+move around directories all over your computer
+
+EXERCISE 9	- MAKE EMPTY FILES (New-Item)
+
+>pwd
+>cd ~
+
+>New-Item *.txt -type file 
+
+EXERCISE 10	- COPY FILE (cp)
+
+>cd ~
+>pwd
+
+>cd temp
+>cp iamcool.txt neat.txt
+>ls
+
+>cp neat.txt awesome.txt
+
+>cp awesome.txt thefourthfile.txt
+
+>mkdir something
+
+>cp awesome.txt something/
+
+>ls something
+
+>cp -recurse something newplace
+>ls newplace
+
+Use cp -r command to copy more directories with files
+
+Copy a file to your home directory or desktop
+
+EXERCISE 11	- MOVE A FILE (mv)
+
+>mv awesome.txt uncoll.txt
+>mv newplace oldpace
+
+Moving files inside the same folder means renaming them => give the old name a new name
+
+EXERCISE 12	- VIEW A FILE (less, MORE)
+
+Exercise 12: View a File (less, MORE)
+
+To do this exerciser, you're going to do some work using the commands you know so far. You'll also need a text editor that can make plain text (.txt) files. Here's what you do:
+- Open your text editor and type some stuff into a new file.
+- Save that file to your desktop and name it test.txt.
+- In your shell, use the commands you know to copy this file to your temp directory that you've been working with.
+Once you've done that, complete this exercise.
+
+>more test.txt
+
+EXERCISE 13	- STREAM A FILE (cat)
+
+>more test2.txt
+
+>cat test2.txt
+
+cat displays all the .txt fyle content without making it possible to see through pages. It shows everything by one time.
+
+Try cat test.txt,test2.txt
+That displays both at same time, one after another.
+
+EXERCISE 14	- REMOVE A FILE (rm)
+
+>pwd
+>cd ~
+
+>cd temp
+>ls
+
+>rm uncool.txt
+>ls
+
+>rm iamcool.txt
+>rm neat.txt
+>rm thefourthfile.txt
+>ls
+
+>rm something/awesome.txt
+>rmdir something
+>rm -r newplace
+>ls
+
+DANGER!!Be careful when running recursive remove on files!!DANGER!!
+
+EXERCISE 15	- EXIT YOUR TERMINAL (exit)
+
+>exit
+
+DO MORE!
+
+HELP
+
+>Get-Help Get-ChildItem
+
+Is the same as
+
+>Get-Help ls
+
+Which is the same as
+
+>ls -?
+
+or
+
+>help ls
+
+Which shows the help page, one page at a time
+
+STATISTICAL OPERATIONS
+
+Create a *.txt file with this information
+Name, Score
+Robo 1, 34
+Robo 2, 36
+Robo 3, 04
+Robo 4, 02
+
+Save it on temp directory
+
+>Import-Csv MeasureObject.txt | Measure-Object score -ave -max -min
+
+
+
+
+
+
+
+
+
